@@ -1,5 +1,5 @@
 with open("rosalind_hamm.txt") as file:
-    lines = [line.strip() for line in file]
+    lines = [line.strip() for line in file] # получаем список из двух строк, которые нужно сравнить
 
 cnt = 0
 

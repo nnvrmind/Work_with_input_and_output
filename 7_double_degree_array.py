@@ -1,5 +1,5 @@
 with open("rosalind_double_degree_array.txt") as file:
-    n, m = map(int, file.readline().split())
+    n, m = map(int, file.readline().split()) # n — число вершин, m — число ребер
     edges = []
     for line in file:
         edges.append(list(map(int, line.split())))
@@ -18,9 +18,9 @@ for edge in edges:
 print(graph)
 
 double_degrees = [] # список для суммы степеней соседей
-for i in range(1, n + 1):
+for i in range(1, n + 1): # i — номер вершины
     neighbor_degree_sum = 0
-    for j in graph[i]:
+    for j in graph[i]: # j — номер соседней вершины
         neighbor_degree_sum += len(graph[j])
     double_degrees.append(neighbor_degree_sum)
 print(*double_degrees)

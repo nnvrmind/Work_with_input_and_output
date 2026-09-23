@@ -5,7 +5,6 @@ def read_fasta(path: str) -> dict:
     ----------
     path : str
         путь к файлу
-
     Returns
     -------
     dna_sequences : dict
@@ -35,7 +34,7 @@ for id_seq, seq in my_dict.items():
     perc = (seq.count("G") + seq.count("C")) * 100 / len(seq)
     gc_contents[id_seq] = perc
 
-max_id = max(gc_contents, key=gc_contents.get)
+max_id = max(gc_contents, key=gc_contents.get) # сравнение ключей по значениям, которые им соответствуют
 
 print(max_id)
 print(gc_contents[max_id])
